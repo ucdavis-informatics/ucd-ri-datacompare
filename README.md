@@ -8,7 +8,7 @@ Using EMR data, 3 physicians performed manual chart review and derived the 6 sub
 Two tables - one computer generated, one manually generated.  Same index (patient_id) and same columns.  Can you quickly spot the differences in the data?
 
 ### Human Generated Table
-![Human Generated Table](images/goldStandardDF.png)
+![Human Generated Table](images/goldStandardDf.png)
 
 ### Computer Generated table
 ![Computer Generated Table](images/computedDf.png)
