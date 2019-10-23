@@ -1,0 +1,340 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<ODM xmlns="http://www.cdisc.org/ns/odm/v1.3" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:redcap="https://projectredcap.org" xsi:schemaLocation="http://www.cdisc.org/ns/odm/v1.3 schema/odm/ODM1-3-1.xsd" ODMVersion="1.3.1" FileOID="000-00-0000" FileType="Snapshot" Description="pyTDAP_SOFA_GS_Score_Template" AsOfDateTime="2019-10-10T13:47:21" CreationDateTime="2019-10-10T13:47:21" SourceSystem="REDCap" SourceSystemVersion="8.10.11">
+<Study OID="Project.PyTDAPSOFAGSScoreTemplate">
+<GlobalVariables>
+	<StudyName>pyTDAP_SOFA_GS_Score_Template</StudyName>
+	<StudyDescription>This file contains the metadata, events, and data for REDCap project "pyTDAP_SOFA_GS_Score_Template".</StudyDescription>
+	<ProtocolName>pyTDAP_SOFA_GS_Score_Template</ProtocolName>
+	<redcap:RecordAutonumberingEnabled>1</redcap:RecordAutonumberingEnabled>
+	<redcap:CustomRecordLabel></redcap:CustomRecordLabel>
+	<redcap:SecondaryUniqueField>study_id</redcap:SecondaryUniqueField>
+	<redcap:SchedulingEnabled>0</redcap:SchedulingEnabled>
+	<redcap:SurveysEnabled>0</redcap:SurveysEnabled>
+	<redcap:SurveyInvitationEmailField></redcap:SurveyInvitationEmailField>
+	<redcap:Purpose>3</redcap:Purpose>
+	<redcap:PurposeOther></redcap:PurposeOther>
+	<redcap:ProjectNotes>Manual SOFA scoring organization template</redcap:ProjectNotes>
+	<redcap:UserRolesGroup>
+		<redcap:UserRoles role_name="SME" lock_record="0" lock_record_multiform="0" lock_record_customize="0" data_export_tool="1" data_import_tool="1" data_comparison_tool="1" data_logging="1" file_repository="1" double_data="0" user_rights="0" data_access_groups="0" graphical="1" reports="1" design="0" calendar="1" data_entry="[sofa_scores,1]" api_export="0" api_import="0" mobile_app="0" mobile_app_download_data="0" record_create="1" record_rename="0" record_delete="0" dts="0" participants="1" data_quality_design="1" data_quality_execute="1" data_quality_resolution="1" random_setup="0" random_dashboard="0" random_perform="0" realtime_webservice_mapping="0" realtime_webservice_adjudicate="0" external_module_config="0"/>
+	</redcap:UserRolesGroup>
+</GlobalVariables>
+<MetaDataVersion OID="Metadata.PyTDAPSOFAGSScoreTemplate_2019-10-10_1347" Name="pyTDAP_SOFA_GS_Score_Template" redcap:RecordIdField="record_id">
+	<Protocol>
+		<StudyEventRef StudyEventOID="Event.cr1_arm_1" OrderNumber="1" Mandatory="No"/>
+		<StudyEventRef StudyEventOID="Event.cr2_arm_1" OrderNumber="2" Mandatory="No"/>
+		<StudyEventRef StudyEventOID="Event.cr3_arm_1" OrderNumber="3" Mandatory="No"/>
+		<StudyEventRef StudyEventOID="Event.crfinal_arm_1" OrderNumber="4" Mandatory="No"/>
+	</Protocol>
+	<StudyEventDef OID="Event.cr1_arm_1" Name="CR1" Type="Common" Repeating="No" redcap:EventName="CR1" redcap:CustomEventLabel="Clinical Reviewer 1" redcap:UniqueEventName="cr1_arm_1" redcap:ArmNum="1" redcap:ArmName="Arm 1" redcap:DayOffset="1" redcap:OffsetMin="0" redcap:OffsetMax="0">
+		<FormRef FormOID="Form.sofa_scores" OrderNumber="1" Mandatory="No" redcap:FormName="sofa_scores"/>
+	</StudyEventDef>
+	<StudyEventDef OID="Event.cr2_arm_1" Name="CR2" Type="Common" Repeating="No" redcap:EventName="CR2" redcap:CustomEventLabel="Clinical Reviewer 2" redcap:UniqueEventName="cr2_arm_1" redcap:ArmNum="1" redcap:ArmName="Arm 1" redcap:DayOffset="2" redcap:OffsetMin="0" redcap:OffsetMax="0">
+		<FormRef FormOID="Form.sofa_scores" OrderNumber="1" Mandatory="No" redcap:FormName="sofa_scores"/>
+	</StudyEventDef>
+	<StudyEventDef OID="Event.cr3_arm_1" Name="CR3" Type="Common" Repeating="No" redcap:EventName="CR3" redcap:CustomEventLabel="Clinical Review 3" redcap:UniqueEventName="cr3_arm_1" redcap:ArmNum="1" redcap:ArmName="Arm 1" redcap:DayOffset="3" redcap:OffsetMin="0" redcap:OffsetMax="0">
+		<FormRef FormOID="Form.sofa_scores" OrderNumber="1" Mandatory="No" redcap:FormName="sofa_scores"/>
+	</StudyEventDef>
+	<StudyEventDef OID="Event.crfinal_arm_1" Name="CRFinal" Type="Common" Repeating="No" redcap:EventName="CRFinal" redcap:CustomEventLabel="Final Adjudicated Review" redcap:UniqueEventName="crfinal_arm_1" redcap:ArmNum="1" redcap:ArmName="Arm 1" redcap:DayOffset="4" redcap:OffsetMin="0" redcap:OffsetMax="0">
+		<FormRef FormOID="Form.sofa_scores" OrderNumber="1" Mandatory="No" redcap:FormName="sofa_scores"/>
+	</StudyEventDef>
+	<FormDef OID="Form.sofa_scores" Name="SOFA_Scores" Repeating="No" redcap:FormName="sofa_scores">
+		<ItemGroupRef ItemGroupOID="sofa_scores.record_id" Mandatory="No"/>
+		<ItemGroupRef ItemGroupOID="sofa_scores.esofa_include" Mandatory="No"/>
+		<ItemGroupRef ItemGroupOID="sofa_scores.tsofaoto24gcsval" Mandatory="No"/>
+		<ItemGroupRef ItemGroupOID="sofa_scores.sofa_scores_complete" Mandatory="No"/>
+	</FormDef>
+	<ItemGroupDef OID="sofa_scores.record_id" Name="SOFA_Scores" Repeating="No">
+		<ItemRef ItemOID="record_id" Mandatory="No" redcap:Variable="record_id"/>
+		<ItemRef ItemOID="sofa_instructions" Mandatory="No" redcap:Variable="sofa_instructions"/>
+		<ItemRef ItemOID="study_id" Mandatory="Yes" redcap:Variable="study_id"/>
+		<ItemRef ItemOID="study_cohort" Mandatory="Yes" redcap:Variable="study_cohort"/>
+		<ItemRef ItemOID="pat_mrn_id" Mandatory="Yes" redcap:Variable="pat_mrn_id"/>
+		<ItemRef ItemOID="pat_enc_csn_id" Mandatory="Yes" redcap:Variable="pat_enc_csn_id"/>
+		<ItemRef ItemOID="index_dt" Mandatory="No" redcap:Variable="index_dt"/>
+		<ItemRef ItemOID="sme_abstractor" Mandatory="No" redcap:Variable="sme_abstractor"/>
+	</ItemGroupDef>
+	<ItemGroupDef OID="sofa_scores.esofa_include" Name="The following section will capture E and T SOFA scores for the 0 to 24 hour time bin.  Index_dt through index_dt plus 24." Repeating="No">
+		<ItemRef ItemOID="esofa_include" Mandatory="No" redcap:Variable="esofa_include"/>
+	</ItemGroupDef>
+	<ItemGroupDef OID="sofa_scores.tsofaoto24gcsval" Name="SOFA_Scores" Repeating="No">
+		<ItemRef ItemOID="tsofaoto24gcsval" Mandatory="No" redcap:Variable="tsofaoto24gcsval"/>
+		<ItemRef ItemOID="tsofa0to24cns" Mandatory="No" redcap:Variable="tsofa0to24cns"/>
+		<ItemRef ItemOID="tsofa0to24bilival" Mandatory="No" redcap:Variable="tsofa0to24bilival"/>
+		<ItemRef ItemOID="tsofa0to24hepatic" Mandatory="No" redcap:Variable="tsofa0to24hepatic"/>
+		<ItemRef ItemOID="tsofa0to24coagval" Mandatory="No" redcap:Variable="tsofa0to24coagval"/>
+		<ItemRef ItemOID="tsofa0to24coag" Mandatory="No" redcap:Variable="tsofa0to24coag"/>
+		<ItemRef ItemOID="tsofa0to24worstmap" Mandatory="No" redcap:Variable="tsofa0to24worstmap"/>
+		<ItemRef ItemOID="tsofa0to24onpressor" Mandatory="No" redcap:Variable="tsofa0to24onpressor"/>
+		<ItemRef ItemOID="tsofa0to24dobdose" Mandatory="No" redcap:Variable="tsofa0to24dobdose"/>
+		<ItemRef ItemOID="tsofa0to24dopadose" Mandatory="No" redcap:Variable="tsofa0to24dopadose"/>
+		<ItemRef ItemOID="tsofa0to24epidose" Mandatory="No" redcap:Variable="tsofa0to24epidose"/>
+		<ItemRef ItemOID="tsofa0to24nepidose" Mandatory="No" redcap:Variable="tsofa0to24nepidose"/>
+		<ItemRef ItemOID="tsofa0to24cv" Mandatory="No" redcap:Variable="tsofa0to24cv"/>
+		<ItemRef ItemOID="tsofa0to24urinout" Mandatory="No" redcap:Variable="tsofa0to24urinout"/>
+		<ItemRef ItemOID="tsofa0to24creatval" Mandatory="No" redcap:Variable="tsofa0to24creatval"/>
+		<ItemRef ItemOID="tsofa0to24renal" Mandatory="No" redcap:Variable="tsofa0to24renal"/>
+		<ItemRef ItemOID="renal_tsofa_vs_esofa_desc" Mandatory="No" redcap:Variable="renal_tsofa_vs_esofa_desc"/>
+		<ItemRef ItemOID="esofa0to24renal" Mandatory="No" redcap:Variable="esofa0to24renal"/>
+		<ItemRef ItemOID="tsofa0to24abgpfval" Mandatory="No" redcap:Variable="tsofa0to24abgpfval"/>
+		<ItemRef ItemOID="tsofa0to24resp" Mandatory="No" redcap:Variable="tsofa0to24resp"/>
+		<ItemRef ItemOID="resp_tsofa_vs_esofa_desc" Mandatory="No" redcap:Variable="resp_tsofa_vs_esofa_desc"/>
+		<ItemRef ItemOID="tsofa0to24o2worstpfder" Mandatory="No" redcap:Variable="tsofa0to24o2worstpfder"/>
+		<ItemRef ItemOID="tsofa0to24o2satval" Mandatory="No" redcap:Variable="tsofa0to24o2satval"/>
+		<ItemRef ItemOID="tsofa0to24o2device" Mandatory="No" redcap:Variable="tsofa0to24o2device"/>
+		<ItemRef ItemOID="tsofa0to24o2lfr" Mandatory="No" redcap:Variable="tsofa0to24o2lfr"/>
+		<ItemRef ItemOID="tsofa0to24fio2val" Mandatory="No" redcap:Variable="tsofa0to24fio2val"/>
+		<ItemRef ItemOID="esofa0to24resp" Mandatory="No" redcap:Variable="esofa0to24resp"/>
+		<ItemRef ItemOID="tsofa0to24total" Mandatory="No" redcap:Variable="tsofa0to24total"/>
+		<ItemRef ItemOID="esofa0to24total" Mandatory="No" redcap:Variable="esofa0to24total"/>
+	</ItemGroupDef>
+	<ItemGroupDef OID="sofa_scores.sofa_scores_complete" Name="Form Status" Repeating="No">
+		<ItemRef ItemOID="sofa_scores_complete" Mandatory="No" redcap:Variable="sofa_scores_complete"/>
+	</ItemGroupDef>
+	<ItemDef OID="record_id" Name="record_id" DataType="text" Length="999" redcap:Variable="record_id" redcap:FieldType="text">
+		<Question><TranslatedText>Record ID</TranslatedText></Question>
+	</ItemDef>
+	<ItemDef OID="sofa_instructions" Name="sofa_instructions" DataType="text" Length="999" redcap:Variable="sofa_instructions" redcap:FieldType="descriptive">
+		<Question><TranslatedText>Scoring Instructions:
+This form is designed to capture manually annotated SOFA scores for the purposes of evaluating the quality of machine derived SOFA scores on the same patients.  To see the scoring rules currently used by the machine, please see this link: 
+
+https://gitlab.ri.ucdavis.edu/ri/pytdap/ucd-ri-esofa/blob/dev/esofaPipeline.py </TranslatedText></Question>
+	</ItemDef>
+	<ItemDef OID="study_id" Name="study_id" DataType="text" Length="999" redcap:Variable="study_id" redcap:FieldType="text" redcap:Identifier="y" redcap:RequiredField="y">
+		<Question><TranslatedText>Study ID - Study Unique Identifier</TranslatedText></Question>
+	</ItemDef>
+	<ItemDef OID="study_cohort" Name="study_cohort" DataType="text" Length="1" redcap:Variable="study_cohort" redcap:FieldType="select" redcap:RequiredField="y">
+		<Question><TranslatedText>Cohort</TranslatedText></Question>
+		<CodeListRef CodeListOID="study_cohort.choices"/>
+	</ItemDef>
+	<ItemDef OID="pat_mrn_id" Name="pat_mrn_id" DataType="float" Length="999" SignificantDigits="1" redcap:Variable="pat_mrn_id" redcap:FieldType="text" redcap:TextValidationType="float" redcap:Identifier="y" redcap:RequiredField="y">
+		<Question><TranslatedText>Medical Record Number</TranslatedText></Question>
+	</ItemDef>
+	<ItemDef OID="pat_enc_csn_id" Name="pat_enc_csn_id" DataType="float" Length="999" SignificantDigits="1" redcap:Variable="pat_enc_csn_id" redcap:FieldType="text" redcap:TextValidationType="float" redcap:Identifier="y" redcap:RequiredField="y">
+		<Question><TranslatedText>CSN - The encounter unique identifier</TranslatedText></Question>
+		<RangeCheck Comparator="GE" SoftHard="Soft">
+			<CheckValue>300000</CheckValue>
+			<ErrorMessage><TranslatedText>The value you provided is outside the suggested range. (300000 - 30000000000). This value is admissible, but you may wish to double check it.</TranslatedText></ErrorMessage>
+		</RangeCheck>
+		<RangeCheck Comparator="LE" SoftHard="Soft">
+			<CheckValue>30000000000</CheckValue>
+			<ErrorMessage><TranslatedText>The value you provided is outside the suggested range. (300000 - 30000000000). This value is admissible, but you may wish to double check it.</TranslatedText></ErrorMessage>
+		</RangeCheck>
+	</ItemDef>
+	<ItemDef OID="index_dt" Name="index_dt" DataType="partialDatetime" Length="999" redcap:Variable="index_dt" redcap:FieldType="text" redcap:TextValidationType="datetime_ymd" redcap:FieldNote="If left blank - we assume hospital admission time">
+		<Question><TranslatedText>Index Datetime - Datetime 0</TranslatedText></Question>
+		<RangeCheck Comparator="GE" SoftHard="Soft">
+			<CheckValue>2010-01-01 00:00</CheckValue>
+			<ErrorMessage><TranslatedText>The value you provided is outside the suggested range. (2010-01-01 00:00 - 2020-01-01 00:00). This value is admissible, but you may wish to double check it.</TranslatedText></ErrorMessage>
+		</RangeCheck>
+		<RangeCheck Comparator="LE" SoftHard="Soft">
+			<CheckValue>2020-01-01 00:00</CheckValue>
+			<ErrorMessage><TranslatedText>The value you provided is outside the suggested range. (2010-01-01 00:00 - 2020-01-01 00:00). This value is admissible, but you may wish to double check it.</TranslatedText></ErrorMessage>
+		</RangeCheck>
+	</ItemDef>
+	<ItemDef OID="sme_abstractor" Name="sme_abstractor" DataType="text" Length="999" redcap:Variable="sme_abstractor" redcap:FieldType="text" redcap:FieldAnnotation="@USERNAME">
+		<Question><TranslatedText>SME Abstractor (This is you)</TranslatedText></Question>
+	</ItemDef>
+	<ItemDef OID="esofa_include" Name="esofa_include" DataType="boolean" Length="1" redcap:Variable="esofa_include" redcap:FieldType="yesno" redcap:SectionHeader="The following section will capture E and T SOFA scores for the 0 to 24 hour time bin.  Index_dt through index_dt plus 24.">
+		<Question><TranslatedText>Include ESOFA?</TranslatedText></Question>
+		<CodeListRef CodeListOID="esofa_include.choices"/>
+	</ItemDef>
+	<ItemDef OID="tsofaoto24gcsval" Name="tsofaoto24gcsval" DataType="integer" Length="999" redcap:Variable="tsofaoto24gcsval" redcap:FieldType="text" redcap:TextValidationType="int">
+		<Question><TranslatedText>Worst recorded value for GCS from Index Time to Index Time plus 24 hours (validated between 3 and 15)</TranslatedText></Question>
+		<RangeCheck Comparator="GE" SoftHard="Soft">
+			<CheckValue>3</CheckValue>
+			<ErrorMessage><TranslatedText>The value you provided is outside the suggested range. (3 - 15). This value is admissible, but you may wish to double check it.</TranslatedText></ErrorMessage>
+		</RangeCheck>
+		<RangeCheck Comparator="LE" SoftHard="Soft">
+			<CheckValue>15</CheckValue>
+			<ErrorMessage><TranslatedText>The value you provided is outside the suggested range. (3 - 15). This value is admissible, but you may wish to double check it.</TranslatedText></ErrorMessage>
+		</RangeCheck>
+	</ItemDef>
+	<ItemDef OID="tsofa0to24cns" Name="tsofa0to24cns" DataType="integer" Length="999" redcap:Variable="tsofa0to24cns" redcap:FieldType="text" redcap:TextValidationType="int">
+		<Question><TranslatedText>TSOFA CNS Score</TranslatedText></Question>
+		<RangeCheck Comparator="GE" SoftHard="Soft">
+			<CheckValue>0</CheckValue>
+			<ErrorMessage><TranslatedText>The value you provided is outside the suggested range. (0 - 4). This value is admissible, but you may wish to double check it.</TranslatedText></ErrorMessage>
+		</RangeCheck>
+		<RangeCheck Comparator="LE" SoftHard="Soft">
+			<CheckValue>4</CheckValue>
+			<ErrorMessage><TranslatedText>The value you provided is outside the suggested range. (0 - 4). This value is admissible, but you may wish to double check it.</TranslatedText></ErrorMessage>
+		</RangeCheck>
+	</ItemDef>
+	<ItemDef OID="tsofa0to24bilival" Name="tsofa0to24bilival" DataType="integer" Length="999" redcap:Variable="tsofa0to24bilival" redcap:FieldType="text" redcap:TextValidationType="int">
+		<Question><TranslatedText>Worst bilirubin lab value from Index Time to Index Time plus 24 (validated from 0 to 50)</TranslatedText></Question>
+		<RangeCheck Comparator="GE" SoftHard="Soft">
+			<CheckValue>0</CheckValue>
+			<ErrorMessage><TranslatedText>The value you provided is outside the suggested range. (0 - 50). This value is admissible, but you may wish to double check it.</TranslatedText></ErrorMessage>
+		</RangeCheck>
+		<RangeCheck Comparator="LE" SoftHard="Soft">
+			<CheckValue>50</CheckValue>
+			<ErrorMessage><TranslatedText>The value you provided is outside the suggested range. (0 - 50). This value is admissible, but you may wish to double check it.</TranslatedText></ErrorMessage>
+		</RangeCheck>
+	</ItemDef>
+	<ItemDef OID="tsofa0to24hepatic" Name="tsofa0to24hepatic" DataType="integer" Length="999" redcap:Variable="tsofa0to24hepatic" redcap:FieldType="text" redcap:TextValidationType="int">
+		<Question><TranslatedText>TSOFA Hepatic Score</TranslatedText></Question>
+		<RangeCheck Comparator="GE" SoftHard="Soft">
+			<CheckValue>0</CheckValue>
+			<ErrorMessage><TranslatedText>The value you provided is outside the suggested range. (0 - 4). This value is admissible, but you may wish to double check it.</TranslatedText></ErrorMessage>
+		</RangeCheck>
+		<RangeCheck Comparator="LE" SoftHard="Soft">
+			<CheckValue>4</CheckValue>
+			<ErrorMessage><TranslatedText>The value you provided is outside the suggested range. (0 - 4). This value is admissible, but you may wish to double check it.</TranslatedText></ErrorMessage>
+		</RangeCheck>
+	</ItemDef>
+	<ItemDef OID="tsofa0to24coagval" Name="tsofa0to24coagval" DataType="integer" Length="999" redcap:Variable="tsofa0to24coagval" redcap:FieldType="text" redcap:TextValidationType="int">
+		<Question><TranslatedText>Worst platelet lab value between Index Time and Index Time plus 24 hours (validated 0 to 1000)</TranslatedText></Question>
+		<RangeCheck Comparator="GE" SoftHard="Soft">
+			<CheckValue>0</CheckValue>
+			<ErrorMessage><TranslatedText>The value you provided is outside the suggested range. (0 - 1000). This value is admissible, but you may wish to double check it.</TranslatedText></ErrorMessage>
+		</RangeCheck>
+		<RangeCheck Comparator="LE" SoftHard="Soft">
+			<CheckValue>1000</CheckValue>
+			<ErrorMessage><TranslatedText>The value you provided is outside the suggested range. (0 - 1000). This value is admissible, but you may wish to double check it.</TranslatedText></ErrorMessage>
+		</RangeCheck>
+	</ItemDef>
+	<ItemDef OID="tsofa0to24coag" Name="tsofa0to24coag" DataType="integer" Length="999" redcap:Variable="tsofa0to24coag" redcap:FieldType="text" redcap:TextValidationType="int">
+		<Question><TranslatedText>TSOFA Coagulation Score</TranslatedText></Question>
+		<RangeCheck Comparator="GE" SoftHard="Soft">
+			<CheckValue>0</CheckValue>
+			<ErrorMessage><TranslatedText>The value you provided is outside the suggested range. (0 - 4). This value is admissible, but you may wish to double check it.</TranslatedText></ErrorMessage>
+		</RangeCheck>
+		<RangeCheck Comparator="LE" SoftHard="Soft">
+			<CheckValue>4</CheckValue>
+			<ErrorMessage><TranslatedText>The value you provided is outside the suggested range. (0 - 4). This value is admissible, but you may wish to double check it.</TranslatedText></ErrorMessage>
+		</RangeCheck>
+	</ItemDef>
+	<ItemDef OID="tsofa0to24worstmap" Name="tsofa0to24worstmap" DataType="integer" Length="999" redcap:Variable="tsofa0to24worstmap" redcap:FieldType="text" redcap:TextValidationType="int">
+		<Question><TranslatedText>Lowest Mean Aterial Pressure (cuff or a line) between Index time and Index time plus 24 hours</TranslatedText></Question>
+	</ItemDef>
+	<ItemDef OID="tsofa0to24onpressor" Name="tsofa0to24onpressor" DataType="boolean" Length="1" redcap:Variable="tsofa0to24onpressor" redcap:FieldType="yesno">
+		<Question><TranslatedText>Patient on pressors? (selecting Yes expands the data fields for recording pressor dosages)</TranslatedText></Question>
+		<CodeListRef CodeListOID="tsofa0to24onpressor.choices"/>
+	</ItemDef>
+	<ItemDef OID="tsofa0to24dobdose" Name="tsofa0to24dobdose" DataType="float" Length="999" redcap:Variable="tsofa0to24dobdose" redcap:FieldType="text" redcap:TextValidationType="number_2dp" redcap:BranchingLogic="[tsofa0to24onpressor] = &#039;1&#039;">
+		<Question><TranslatedText>Dobutamine max dose Index time to Index time plust 24 hours mcg/kg/min</TranslatedText></Question>
+	</ItemDef>
+	<ItemDef OID="tsofa0to24dopadose" Name="tsofa0to24dopadose" DataType="float" Length="999" redcap:Variable="tsofa0to24dopadose" redcap:FieldType="text" redcap:TextValidationType="number_2dp" redcap:BranchingLogic="[tsofa0to24onpressor] = &#039;1&#039;">
+		<Question><TranslatedText>Dopamine max dose Index time to Index time plus 24 hours mcg/kg/min</TranslatedText></Question>
+	</ItemDef>
+	<ItemDef OID="tsofa0to24epidose" Name="tsofa0to24epidose" DataType="float" Length="999" redcap:Variable="tsofa0to24epidose" redcap:FieldType="text" redcap:TextValidationType="number_2dp" redcap:BranchingLogic="[tsofa0to24onpressor] = &#039;1&#039;">
+		<Question><TranslatedText>Epinephrine max dose Index time to Index time plus 24 hours mcg/kg/min</TranslatedText></Question>
+	</ItemDef>
+	<ItemDef OID="tsofa0to24nepidose" Name="tsofa0to24nepidose" DataType="float" Length="999" redcap:Variable="tsofa0to24nepidose" redcap:FieldType="text" redcap:TextValidationType="number_2dp" redcap:BranchingLogic="[tsofa0to24onpressor] = &#039;1&#039;">
+		<Question><TranslatedText>Norepinephrine max dose Index time to Index time plus 24 hours mcg/kg/min</TranslatedText></Question>
+	</ItemDef>
+	<ItemDef OID="tsofa0to24cv" Name="tsofa0to24cv" DataType="integer" Length="999" redcap:Variable="tsofa0to24cv" redcap:FieldType="text" redcap:TextValidationType="int">
+		<Question><TranslatedText>TSOFA Cardiovascular Score</TranslatedText></Question>
+		<RangeCheck Comparator="GE" SoftHard="Soft">
+			<CheckValue>0</CheckValue>
+			<ErrorMessage><TranslatedText>The value you provided is outside the suggested range. (0 - 4). This value is admissible, but you may wish to double check it.</TranslatedText></ErrorMessage>
+		</RangeCheck>
+		<RangeCheck Comparator="LE" SoftHard="Soft">
+			<CheckValue>4</CheckValue>
+			<ErrorMessage><TranslatedText>The value you provided is outside the suggested range. (0 - 4). This value is admissible, but you may wish to double check it.</TranslatedText></ErrorMessage>
+		</RangeCheck>
+	</ItemDef>
+	<ItemDef OID="tsofa0to24urinout" Name="tsofa0to24urinout" DataType="text" Length="999" redcap:Variable="tsofa0to24urinout" redcap:FieldType="text">
+		<Question><TranslatedText>Total volume urine output from Index Time to Index Time plus 24.  Include outputs and voids</TranslatedText></Question>
+	</ItemDef>
+	<ItemDef OID="tsofa0to24creatval" Name="tsofa0to24creatval" DataType="float" Length="999" redcap:Variable="tsofa0to24creatval" redcap:FieldType="text" redcap:TextValidationType="number_1dp">
+		<Question><TranslatedText>Worst Creatinine lab value in Index Time to Index Time plus 24</TranslatedText></Question>
+	</ItemDef>
+	<ItemDef OID="tsofa0to24renal" Name="tsofa0to24renal" DataType="integer" Length="999" redcap:Variable="tsofa0to24renal" redcap:FieldType="text" redcap:TextValidationType="int">
+		<Question><TranslatedText>TSOFA Renal Score (Based on 24 hour urine output)</TranslatedText></Question>
+		<RangeCheck Comparator="GE" SoftHard="Soft">
+			<CheckValue>0</CheckValue>
+			<ErrorMessage><TranslatedText>The value you provided is outside the suggested range. (0 - 4). This value is admissible, but you may wish to double check it.</TranslatedText></ErrorMessage>
+		</RangeCheck>
+		<RangeCheck Comparator="LE" SoftHard="Soft">
+			<CheckValue>4</CheckValue>
+			<ErrorMessage><TranslatedText>The value you provided is outside the suggested range. (0 - 4). This value is admissible, but you may wish to double check it.</TranslatedText></ErrorMessage>
+		</RangeCheck>
+	</ItemDef>
+	<ItemDef OID="renal_tsofa_vs_esofa_desc" Name="renal_tsofa_vs_esofa_desc" DataType="text" Length="999" redcap:Variable="renal_tsofa_vs_esofa_desc" redcap:FieldType="descriptive" redcap:BranchingLogic="[esofa_include] = &#039;1&#039;">
+		<Question><TranslatedText>The difference between tSOFA Renal and eSOFA renal is in the use of urine output during scoring.  In tSOFA scores 1-3 are driven solely by creatinine value.  In eSOFA, the score 3 lower bound is dropped to 2 (down from 3.5) when urine output is low, between 200 and 500.</TranslatedText></Question>
+	</ItemDef>
+	<ItemDef OID="esofa0to24renal" Name="esofa0to24renal" DataType="integer" Length="999" redcap:Variable="esofa0to24renal" redcap:FieldType="text" redcap:TextValidationType="int" redcap:BranchingLogic="[esofa_include] = &#039;1&#039;">
+		<Question><TranslatedText>ESOFA Renal Score (Based on 24 hour urine output)</TranslatedText></Question>
+		<RangeCheck Comparator="GE" SoftHard="Soft">
+			<CheckValue>0</CheckValue>
+			<ErrorMessage><TranslatedText>The value you provided is outside the suggested range. (0 - 4). This value is admissible, but you may wish to double check it.</TranslatedText></ErrorMessage>
+		</RangeCheck>
+		<RangeCheck Comparator="LE" SoftHard="Soft">
+			<CheckValue>4</CheckValue>
+			<ErrorMessage><TranslatedText>The value you provided is outside the suggested range. (0 - 4). This value is admissible, but you may wish to double check it.</TranslatedText></ErrorMessage>
+		</RangeCheck>
+	</ItemDef>
+	<ItemDef OID="tsofa0to24abgpfval" Name="tsofa0to24abgpfval" DataType="float" Length="999" redcap:Variable="tsofa0to24abgpfval" redcap:FieldType="text" redcap:TextValidationType="number_3dp">
+		<Question><TranslatedText>Worst P/F ratio lab result from Index Time to Index time plus 24 hours</TranslatedText></Question>
+	</ItemDef>
+	<ItemDef OID="tsofa0to24resp" Name="tsofa0to24resp" DataType="integer" Length="999" redcap:Variable="tsofa0to24resp" redcap:FieldType="text" redcap:TextValidationType="int">
+		<Question><TranslatedText>TSOFA Resp Score (ABG based)</TranslatedText></Question>
+		<RangeCheck Comparator="GE" SoftHard="Soft">
+			<CheckValue>0</CheckValue>
+			<ErrorMessage><TranslatedText>The value you provided is outside the suggested range. (0 - 4). This value is admissible, but you may wish to double check it.</TranslatedText></ErrorMessage>
+		</RangeCheck>
+		<RangeCheck Comparator="LE" SoftHard="Soft">
+			<CheckValue>4</CheckValue>
+			<ErrorMessage><TranslatedText>The value you provided is outside the suggested range. (0 - 4). This value is admissible, but you may wish to double check it.</TranslatedText></ErrorMessage>
+		</RangeCheck>
+	</ItemDef>
+	<ItemDef OID="resp_tsofa_vs_esofa_desc" Name="resp_tsofa_vs_esofa_desc" DataType="text" Length="999" redcap:Variable="resp_tsofa_vs_esofa_desc" redcap:FieldType="descriptive" redcap:BranchingLogic="[esofa_include] = &#039;1&#039;">
+		<Question><TranslatedText>The difference between tSOFA resp and eSOFA resp is in the data providing the PaO2 and FiO2 values.  In tSOFA, these data come from an aterial blood gas lab result.  In eSOFA, PaO2 is derived from O2Sat readings and FiO2 is derived from Oxygen delivery device, either explicitly recorded or derived from flow rate.</TranslatedText></Question>
+	</ItemDef>
+	<ItemDef OID="tsofa0to24o2worstpfder" Name="tsofa0to24o2worstpfder" DataType="float" Length="999" SignificantDigits="1" redcap:Variable="tsofa0to24o2worstpfder" redcap:FieldType="text" redcap:TextValidationType="float">
+		<Question><TranslatedText>Worst derived P/F ration from Index time to Index time plus 24 hours</TranslatedText></Question>
+	</ItemDef>
+	<ItemDef OID="tsofa0to24o2satval" Name="tsofa0to24o2satval" DataType="float" Length="999" SignificantDigits="1" redcap:Variable="tsofa0to24o2satval" redcap:FieldType="text" redcap:TextValidationType="float">
+		<Question><TranslatedText>O2 Sat at time of worst derived P/F</TranslatedText></Question>
+	</ItemDef>
+	<ItemDef OID="tsofa0to24o2device" Name="tsofa0to24o2device" DataType="text" Length="999" redcap:Variable="tsofa0to24o2device" redcap:FieldType="text">
+		<Question><TranslatedText>O2 Delivery device at time of worst derived P/F</TranslatedText></Question>
+	</ItemDef>
+	<ItemDef OID="tsofa0to24o2lfr" Name="tsofa0to24o2lfr" DataType="integer" Length="999" redcap:Variable="tsofa0to24o2lfr" redcap:FieldType="text" redcap:TextValidationType="int">
+		<Question><TranslatedText>O2 Liter Flow rate at time of worst derived P/F</TranslatedText></Question>
+	</ItemDef>
+	<ItemDef OID="tsofa0to24fio2val" Name="tsofa0to24fio2val" DataType="float" Length="999" redcap:Variable="tsofa0to24fio2val" redcap:FieldType="text" redcap:TextValidationType="number_2dp">
+		<Question><TranslatedText>FiO2 measured or calculated at time of worst derived P/F ratio</TranslatedText></Question>
+	</ItemDef>
+	<ItemDef OID="esofa0to24resp" Name="esofa0to24resp" DataType="integer" Length="999" redcap:Variable="esofa0to24resp" redcap:FieldType="text" redcap:TextValidationType="int" redcap:BranchingLogic="[esofa_include] = &#039;1&#039;">
+		<Question><TranslatedText>ESOFA Resp - Based on derived P (O2 sat) and F (Device and liter flow rate)</TranslatedText></Question>
+		<RangeCheck Comparator="GE" SoftHard="Soft">
+			<CheckValue>0</CheckValue>
+			<ErrorMessage><TranslatedText>The value you provided is outside the suggested range. (0 - 4). This value is admissible, but you may wish to double check it.</TranslatedText></ErrorMessage>
+		</RangeCheck>
+		<RangeCheck Comparator="LE" SoftHard="Soft">
+			<CheckValue>4</CheckValue>
+			<ErrorMessage><TranslatedText>The value you provided is outside the suggested range. (0 - 4). This value is admissible, but you may wish to double check it.</TranslatedText></ErrorMessage>
+		</RangeCheck>
+	</ItemDef>
+	<ItemDef OID="tsofa0to24total" Name="tsofa0to24total" DataType="float" Length="999" redcap:Variable="tsofa0to24total" redcap:FieldType="calc" redcap:Calculation="[tsofa0to24cns]+[tsofa0to24hepatic]+[tsofa0to24coag]+ [tsofa0to24cv] + [tsofa0to24renal]+[tsofa0to24resp]">
+		<Question><TranslatedText>TSOFA total (all TSOFA fields summed)</TranslatedText></Question>
+	</ItemDef>
+	<ItemDef OID="esofa0to24total" Name="esofa0to24total" DataType="float" Length="999" redcap:Variable="esofa0to24total" redcap:FieldType="calc" redcap:Calculation="[tsofa0to24cns]+[tsofa0to24hepatic]+[tsofa0to24coag]+ [tsofa0to24cv] + [esofa0to24renal]+[esofa0to24resp]" redcap:BranchingLogic="[esofa_include] = &#039;1&#039;">
+		<Question><TranslatedText>ESOFA total</TranslatedText></Question>
+	</ItemDef>
+	<ItemDef OID="sofa_scores_complete" Name="sofa_scores_complete" DataType="text" Length="1" redcap:Variable="sofa_scores_complete" redcap:FieldType="select" redcap:SectionHeader="Form Status">
+		<Question><TranslatedText>Complete?</TranslatedText></Question>
+		<CodeListRef CodeListOID="sofa_scores_complete.choices"/>
+	</ItemDef>
+	<CodeList OID="study_cohort.choices" Name="study_cohort" DataType="text" redcap:Variable="study_cohort">
+		<CodeListItem CodedValue="1"><Decode><TranslatedText>ICU Derivation</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="2"><Decode><TranslatedText>ICU Validation</TranslatedText></Decode></CodeListItem>
+	</CodeList>
+	<CodeList OID="esofa_include.choices" Name="esofa_include" DataType="boolean" redcap:Variable="esofa_include">
+		<CodeListItem CodedValue="1"><Decode><TranslatedText>Yes</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="0"><Decode><TranslatedText>No</TranslatedText></Decode></CodeListItem>
+	</CodeList>
+	<CodeList OID="tsofa0to24onpressor.choices" Name="tsofa0to24onpressor" DataType="boolean" redcap:Variable="tsofa0to24onpressor">
+		<CodeListItem CodedValue="1"><Decode><TranslatedText>Yes</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="0"><Decode><TranslatedText>No</TranslatedText></Decode></CodeListItem>
+	</CodeList>
+	<CodeList OID="sofa_scores_complete.choices" Name="sofa_scores_complete" DataType="text" redcap:Variable="sofa_scores_complete">
+		<CodeListItem CodedValue="0"><Decode><TranslatedText>Incomplete</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="1"><Decode><TranslatedText>Unverified</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="2"><Decode><TranslatedText>Complete</TranslatedText></Decode></CodeListItem>
+	</CodeList>
+</MetaDataVersion>
+</Study>
+</ODM>
